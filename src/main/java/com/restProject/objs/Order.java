@@ -2,13 +2,13 @@ package com.restProject.objs;
 
 import lombok.*;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
-public class Client {
+public class Order {
     public String name;
-    public int age;
+    public int numberOrder;
+    public int price;
 }
