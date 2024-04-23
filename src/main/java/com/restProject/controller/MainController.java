@@ -13,15 +13,14 @@ public class MainController {
     @Autowired
     public ObjectMapper objectMapper;
     @GetMapping("api/Client")
-    public String getClient() throws JsonProcessingException {
+    public Client getClient() throws JsonProcessingException {
         Client client = new Client("Igor",22);
-        String jsonData = objectMapper.writeValueAsString(client);
-        return jsonData;
+        return client;
     }
     @GetMapping("api/Order")
-    public String getOrder() throws JsonProcessingException {
+    public Order getOrder() throws JsonProcessingException {
         Order order = new Order("Pizza", 1, 1000);
-        String jsonData1 = objectMapper.writeValueAsString(order);
-        return jsonData1;
+
+        return order;
     }
 }
